@@ -5,6 +5,16 @@
 
 Computer-vision utilities for satellite imagery, focused on YOLOv8 object detection and HSV-based segmentation.
 
+## Example Outputs
+
+YOLOv8 detection overlay:
+
+![PixelVision detection example](docs/images/detection-sample.png)
+
+Segmentation example, with original input on the left and the segmented result on the right:
+
+![PixelVision segmentation example](docs/images/segmentation-sample.jpg)
+
 ## What This Repo Contains
 
 - `src/detection/` for YOLOv8 inference helpers
@@ -75,7 +85,10 @@ PixelVision/
 ├── docs/
 │   ├── HSV_REFERENCE.md
 │   ├── INFERENCE.md
-│   └── MODEL_TRAINING.md
+│   ├── MODEL_TRAINING.md
+│   └── images/
+│       ├── detection-sample.png
+│       └── segmentation-sample.jpg
 ├── examples/
 │   └── detect_and_segment.py
 ├── models/
