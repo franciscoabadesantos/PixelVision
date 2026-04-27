@@ -11,7 +11,7 @@ YOLOv8 detection overlay:
 
 ![PixelVision detection example](docs/images/detection-sample.png)
 
-Segmentation example, with original input on the left and the segmented result on the right:
+Segmentation example, with the extracted segmentation output on the left and the corresponding binary mask on the right:
 
 ![PixelVision segmentation example](docs/images/segmentation-sample.jpg)
 
