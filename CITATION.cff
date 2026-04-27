@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use PixelVision in research, please cite it using this metadata."
+title: "PixelVision"
+type: software
+authors:
+  - family-names: "Santos"
+    given-names: "Francisco"
+    email: "franciscoabasantos@gmail.com"
+repository-code: "https://github.com/franciscoabadesantos/PixelVision"
+license: "MIT"
+version: "1.0.0"
+date-released: "2026-04-27"
+abstract: "Computer-vision utilities for satellite imagery, centered on YOLOv8 object detection and HSV-based segmentation."

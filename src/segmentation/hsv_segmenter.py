@@ -22,8 +22,8 @@ class HSVSegmenter:
         Note: OpenCV HSV ranges are H: 0-179, S: 0-255, V: 0-255
         """
         # Default bounds for red/orange detection (common for solar panels)
-        self.hsv_lower = hsv_lower or np.array([0, 30, 30])
-        self.hsv_upper = hsv_upper or np.array([180, 255, 255])
+        self.hsv_lower = hsv_lower if hsv_lower is not None else np.array([0, 30, 30])
+        self.hsv_upper = hsv_upper if hsv_upper is not None else np.array([180, 255, 255])
         self.exclude_ranges = []
 
     def add_exclude_range(self, hsv_lower, hsv_upper):

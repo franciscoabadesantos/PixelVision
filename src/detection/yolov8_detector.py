@@ -9,6 +9,11 @@ import os
 from pathlib import Path
 
 try:
+    import torch
+except ImportError:
+    torch = None
+
+try:
     from ultralytics import YOLO
 except ImportError:
     raise ImportError("YOLOv8 requires ultralytics: pip install ultralytics")
@@ -27,7 +32,7 @@ class SatelliteDetector:
         """
         self.confidence = confidence
         self.model = YOLO(model_path)
-        self.device = "cuda" if cv2.cuda.getCudaEnabledDeviceCount() > 0 else "cpu"
+        self.device = "cuda" if torch is not None and torch.cuda.is_available() else "cpu"
 
     def detect(self, image_path, save_result=False, output_dir=None):
         """
